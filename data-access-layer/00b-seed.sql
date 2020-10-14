@@ -7,7 +7,7 @@
 -- Set the role to 'recipe_box_app' so the tables created will be owned by that
 -- user.
 
--- YOUR CODE HERE
+SET ROLE 'recipe_box_app';
 
 
 
@@ -24,7 +24,12 @@
 -- | created     | TIMESTAMP    | NOT NULL, DEFAULT CURRENT_TIMESTAMP |
 -- | updated     | TIMESTAMP    | NOT NULL, DEFAULT CURRENT_TIMESTAMP |
 
--- YOUR CODE HERE
+CREATE TABLE recipes (
+    id SERIAL PRIMARY KEY
+  , title VARCHAR(200) NOT NULL
+  , created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  , updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 
 
 
