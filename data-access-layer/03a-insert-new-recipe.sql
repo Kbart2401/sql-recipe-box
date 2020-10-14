@@ -16,4 +16,7 @@
 -- RETURNING id (this will return the id of the new recipe, don't forget it!)
 
 
--- YOUR CODE HERE
+INSERT INTO recipes (title)
+VALUES ($1)
+RETURNING id;
+
